@@ -1,0 +1,22 @@
+#! usr/bin/env python3
+
+#Food At Home
+#Your virtual kitchen inventory and shopping list generator
+
+#Kitchen Inventory
+fooditem = input("Add new food item: ")
+
+#Stock options for kitchen inventory
+itemAmount = input("Please input how much you have (Please select Full, Low, or Empty):")
+if itemAmount == "Full":
+    print("Full Stock")
+elif itemAmount == "Low":
+    print("Low Stock")
+elif itemAmount == "Empty":
+    itemAmount == "Out of Stock"
+
+#Shopping List
+if (itemAmount == "Out of Stock") or (itemAmount == "Low Stock"):
+    print(fooditem)
+else:
+    print("Your kitchen is fully stocked!") 
