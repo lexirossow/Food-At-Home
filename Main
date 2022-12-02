@@ -12,15 +12,19 @@ def seeMyKitchen():
 def main():
     print("Welcome to Food At Home!") 
     print("Your kitchen inventory and shopping list generator in your hand.")
-    firstContact = userinput("Please type in what you'd like to do today:")
+    userActions = ["1. See My Kitchen", "2. Import A Grocery Reciept"]
+    print(*userActions, sep="\n")
+    firstContact = input("Please type the list number of what you'd like to do today:")
     #list of user actions to select from
-    userActions = ["See My Kitchen", "Import A Grocery Reciept"]
-    userActions.islower()
-    if firstContact == "see my kitchen":
+    if firstContact == "1":
         seeMyKitchen()
     else:
         print("Please selection a valid option.")
-        main() 
+        main()
+
+# call the main function
+if __name__ == "__main__":
+    main()
 
 
         
@@ -41,3 +45,4 @@ def main():
 #    print(fooditem)
 #else:
 #   print("Your kitchen is fully stocked!") 
+
