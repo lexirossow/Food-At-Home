@@ -3,18 +3,33 @@
 #Food At Home
 #Your virtual kitchen inventory and shopping list generator
 
+#kitchen Inventory list
+kitchenInventory = []
+
 #See My Kitchen function
 def seeMyKitchen():
-  print("Hello from your kitchen!")
+  print("\nWelcome to your virtual kitchen!")
+  print("Here is your current inventory:")
+  if len(kitchenInventory) == 0:
+      print("\nUh oh! It looks like your kitchen doesn't have any food. Let's fix that.")
+      
+  else:
+      print(kitchenInventory)
 
 ####################### START HERE #########################
 #Main Module
 def main():
     print("Welcome to Food At Home!") 
     print("Your kitchen inventory and shopping list generator in your hand.")
+
+    #list of user actions
     userActions = ["1. See My Kitchen", "2. Import A Grocery Reciept"]
+    print("\nList of Actions:")
     print(*userActions, sep="\n")
-    firstContact = input("Please type the list number of what you'd like to do today:")
+
+    #prompt for first user input 
+    firstContact = input("\nPlease type the list number of what you'd like to do today:")
+
     #list of user actions to select from
     if firstContact == "1":
         seeMyKitchen()
@@ -26,11 +41,11 @@ def main():
 if __name__ == "__main__":
     main()
 
+#Add food
+def addFood():
+    fooditem = input("Add new item: ")
 
-        
-#Kitchen Inventory
-#fooditem = input("Add new food item: ")
-
+#Set food stock
 #Stock options for kitchen inventory
 #itemAmount = input("Please input how much you have (Please select Full, Low, or Empty):")
 #if itemAmount == "Full":
@@ -45,4 +60,3 @@ if __name__ == "__main__":
 #    print(fooditem)
 #else:
 #   print("Your kitchen is fully stocked!") 
-
